@@ -49,6 +49,16 @@ This is a monorepo containing both the Front-End and Back-End applications.
 
 ### Local Development (without Docker)
 
+**Frontend Setup**
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend will run on `http://localhost:3001`.
+
 **Backend Setup**
 
 ```bash
@@ -80,7 +90,7 @@ DATABASE_URL=mongodb://localhost:27017/quote-editor
 
 ### Docker Compose (Full Stack)
 
-Run the entire application stack (Backend + MongoDB) using Docker Compose.
+Run the entire application stack (Frontend + Backend + MongoDB) using Docker Compose.
 
 **Requirements:**
 - Docker and Docker Compose installed
@@ -100,6 +110,7 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
 
 **Accessing Services:**
 - Backend API: `http://localhost:3000`
+- Frontend App: `http://localhost:3001`
 - MongoDB: `mongodb://localhost:27017`
 
 **Stop Services:**
